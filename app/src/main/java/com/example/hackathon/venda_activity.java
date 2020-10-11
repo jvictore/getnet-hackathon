@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class gasto_activity extends AppCompatActivity {
+public class venda_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gasto_activity);
+        setContentView(R.layout.venda_activity);
     }
 
     public void addCategoria(View view)
