@@ -3,18 +3,12 @@ package com.example.hackathon;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 
-public class relatorio_activity extends AppCompatActivity {
+public class gasto_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.relatorio_activity);
+        setContentView(R.layout.activity_gasto_activity);
     }
-
-    public void fecharRelatorio(View view)
-    {
-        finish();
-    }
-};
+}

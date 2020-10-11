@@ -7,7 +7,8 @@
     <color name="dangerRed">#bb2124</color>
     <color name="successLightGreen">#42c27e</color>
     <color name="dangerLightRed">#f64242</color>
-    <color name="blackText">#23272a</color>
+    <color name="blackText">#333333</color>
     <color name="whiteText">#f0f0f0</color>
     <color name="infoBlue">#005073</color>
+    <color name="sectionGray">#f0f0f0</color>
 </resources>
