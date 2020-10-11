@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".telacompra_activity"></activity>
-        <activity android:name=".adicionarcategoria_activity" />
-        <activity android:name=".relatorio_activity">
+        <activity android:name=".adicionarcategoria_activity"></activity>
+        <activity android:name=".index_activity" />
+        <activity android:name=".relatorio_activity" />
+        <activity android:name=".telacompra_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
