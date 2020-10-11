@@ -13,6 +13,14 @@ public class index_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index_activity);
+
+        Button btn_venda = findViewById(R.id.btnVenda);
+        btn_venda.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent it = new Intent(index_activity.this, telavenda_activity.class);
+                startActivity(it);
+            }
+        });
     }
 
     public void gerarRelatorio(View view) {
