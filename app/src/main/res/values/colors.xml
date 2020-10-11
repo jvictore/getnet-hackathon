@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ec0000</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#6d6d6d</color>
+    <color name="successGreen">#22bb33</color>
+    <color name="dangerRed">#bb2124</color>
+    <color name="successLightGreen">#42c27e</color>
+    <color name="dangerLightRed">#f64242</color>
+    <color name="blackText">#23272a</color>
+    <color name="whiteText">#f0f0f0</color>
+    <color name="infoBlue">#005073</color>
+</resources>
