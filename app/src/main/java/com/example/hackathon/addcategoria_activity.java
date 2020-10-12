@@ -70,5 +70,7 @@ public class addcategoria_activity extends AppCompatActivity {
                         Log.w("addcategoria", "Error adding document", e);
                     }
                 });
+
+        finish();
     }
 }
