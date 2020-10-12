@@ -39,7 +39,11 @@ public class index_activity extends AppCompatActivity {
 
         gerarLucro();
     }
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        gerarLucro();
+    }
 
     public void gerarLucro(){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -79,7 +83,7 @@ public class index_activity extends AppCompatActivity {
 
                         lucro = valor_total_venda - valor_total_gasto;
 
-                        DecimalFormat df = new DecimalFormat("0.##");
+                        DecimalFormat df = new DecimalFormat("0.00");
                         String vendaS = df.format((valor_total_venda));
 
                         String rcifrao = new String ("R$: ");
