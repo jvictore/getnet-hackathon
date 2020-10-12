@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawablePadding="5sp"
-        android:text="R$ 860,50"
         android:textColor="@color/successGreen"
         android:textSize="24sp"
         android:typeface="sans"
