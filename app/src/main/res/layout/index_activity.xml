@@ -14,7 +14,7 @@
     tools:context=".index_activity">
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/lucroMesIndex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -112,12 +112,11 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/vendaMesIndex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_baseline_trending_up_24"
                 android:drawablePadding="5sp"
-                android:text="R$ 860,50"
                 android:textColor="@color/whiteText"
                 android:textSize="24sp"
                 android:typeface="sans"
@@ -145,12 +144,11 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/gastoMesIndex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_baseline_trending_down_24"
                 android:drawablePadding="5sp"
-                android:text="R$ 500,25"
                 android:textColor="@color/whiteText"
                 android:textSize="24sp"
                 android:typeface="sans"
