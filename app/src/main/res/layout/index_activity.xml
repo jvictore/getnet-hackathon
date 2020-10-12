@@ -197,7 +197,7 @@
         android:onClick="lancarVenda"
         android:paddingLeft="25sp"
         android:paddingRight="25sp"
-        android:text="Venda"
+        android:text="Ganho"
         android:textColor="@color/whiteText"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
