@@ -217,6 +217,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recGanhos"
+            android:layout_width="203dp"
+            android:layout_height="243dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="184dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recGastos"
+            android:layout_width="206dp"
+            android:layout_height="246dp"
+            android:layout_marginBottom="184dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

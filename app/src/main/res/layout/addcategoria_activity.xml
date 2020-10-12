@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:fillViewport="true"
-    >
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,12 +13,13 @@
         tools:context=".addcategoria_activity">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bntConfirma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_relatoriobtn"
             android:drawableLeft="@drawable/ic_baseline_check_24"
             android:drawablePadding="5sp"
+            android:onClick="nova_categoria"
             android:paddingLeft="35sp"
             android:paddingRight="35sp"
             android:text="Confirmar"
@@ -35,10 +34,11 @@
             android:id="@+id/editTextTextPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 

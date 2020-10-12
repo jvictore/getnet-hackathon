@@ -16,6 +16,8 @@ public class gasto_activity extends AppCompatActivity {
 
     public void addCategoria(View view)
     {
-        startActivity(new Intent(this, addcategoria_activity.class));
+        Intent intent = new Intent(this, addcategoria_activity.class);
+        intent.putExtra("TYPE", "GASTO");
+        startActivity(intent);
     }
 }
