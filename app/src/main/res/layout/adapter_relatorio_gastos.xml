@@ -2,31 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="12dp"
+    android:layout_margin="8sp"
     android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textCat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textCat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Categoria"
-            android:textColor="#DC1212"
-            android:textSize="24sp" />
-
-    </LinearLayout>
+        android:layout_weight="1"
+        android:background="@color/dangerLightRed"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="7sp"
+        android:text="Categoria"
+        android:textColor="@color/whiteText"
+        android:textSize="20sp"
+        android:typeface="sans" />
 
     <TextView
         android:id="@+id/textValor"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/sectionGray"
+        android:fontFamily="sans-serif-black"
+        android:padding="7sp"
         android:text="Valor"
-        android:textColor="#DC1212"
-        android:textSize="24sp" />
+        android:textColor="@color/blackText"
+        android:textSize="18sp"
+        android:typeface="sans" />
 </LinearLayout>

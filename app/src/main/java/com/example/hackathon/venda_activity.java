@@ -39,7 +39,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Map;
 
 public class venda_activity extends AppCompatActivity {
-    public static final String TAG = "venda_activity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -73,13 +72,6 @@ public class venda_activity extends AppCompatActivity {
 
                     }
                 });
-    }
-
-    public void addCategoria(View view)
-    {
-        Intent intent = new Intent(this, addcategoria_activity.class);
-        intent.putExtra("TYPE", "VENDA");
-        startActivity(intent);
     }
 
     public void submitVenda(View view) {
@@ -126,5 +118,12 @@ public class venda_activity extends AppCompatActivity {
                 });
 
         finish();
+    }
+
+    public void addCategoria(View view)
+    {
+        Intent intent = new Intent(this, addcategoria_activity.class);
+        intent.putExtra("TYPE", "VENDA");
+        startActivity(intent);
     }
 }
