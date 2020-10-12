@@ -17,6 +17,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -63,19 +65,28 @@ public class index_activity extends AppCompatActivity {
                         lucro = valor_total_venda - valor_total_gasto;
                         Log.i("MSGDoLucro",lucro.toString());
 
+                        DecimalFormat df = new DecimalFormat("0.##");
+                        String vendaS = df.format((valor_total_venda));
+
                         String rcifrao = new String ("R$: ");
-                        rcifrao = rcifrao.concat( valor_total_venda.toString());
+                        rcifrao = rcifrao.concat(vendaS);
                         TextView venda_mes_index= (TextView)findViewById(R.id.vendaMesIndex);
                         venda_mes_index.setText(rcifrao);
 
+                        String gastoS = df.format((valor_total_gasto));
+
                         rcifrao = new String ("R$: ");
-                        rcifrao = rcifrao.concat( valor_total_gasto.toString());
+                        rcifrao = rcifrao.concat(gastoS);
                         TextView gasto_mes_index= (TextView)findViewById(R.id.gastoMesIndex);
                         gasto_mes_index.setText(rcifrao);
 
                         rcifrao = new String ("R$: ");
+
+                        String lucroS = df.format((lucro));
+
                         lucro = valor_total_venda - valor_total_gasto;
-                        rcifrao = rcifrao.concat( lucro.toString());
+
+                        rcifrao = rcifrao.concat( lucroS);
                         TextView lucro_mes_index= (TextView)findViewById(R.id.lucroMesIndex);
                         lucro_mes_index.setText(rcifrao);
 
