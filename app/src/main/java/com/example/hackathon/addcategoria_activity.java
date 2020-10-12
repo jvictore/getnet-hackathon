@@ -48,6 +48,8 @@ public class addcategoria_activity extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         EditText texto = (EditText) findViewById(R.id.editTextTextPersonName);
         String nome_categoria = texto.getText().toString();
+        Map<String, Object> individuais = new HashMap<>();
+
         Map<String, Object> categoria = new HashMap<>();
         categoria.put("categoria", nome_categoria);
         categoria.put("tipo", tipo);
