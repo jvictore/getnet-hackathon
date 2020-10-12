@@ -48,6 +48,11 @@ public class venda_activity extends AppCompatActivity {
         fillSpinner();
     }
 
+    protected void onResume() {
+        super.onResume();
+        fillSpinner();
+    }
+
     public void fillSpinner() {
         final Spinner s = (Spinner) findViewById(R.id.categorias);
 

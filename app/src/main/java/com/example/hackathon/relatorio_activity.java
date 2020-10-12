@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -15,6 +18,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.core.OrderBy;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +33,7 @@ public class relatorio_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relatorio_activity);
+        gerarLucro();
         this.gerarRelatorio();
     }
 
@@ -83,5 +88,73 @@ public class relatorio_activity extends AppCompatActivity {
     public void fecharRelatorio(View view)
     {
         finish();
+    }
+
+
+    public void gerarLucro(){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        //Calendar calendar = Calendar.getInstance();
+        //TimeZone.setDefault(TimeZone.getTimeZone("America/Sao_Paulo"));
+        //calendar.set(Calendar.DAY_OF_MONTH, 1);
+        ///Date now = calendar.getTime();
+
+        //Log.i("OPPA", now.toString());
+        //Timestamp currentTime = new Timestamp(now);
+
+        //.whereGreaterThan("att", currentTime)
+
+        db.collection("Categorias")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        Double valor_total_venda = 0.0 , valor_total_gasto = 0.0, lucro = 0.0;
+                        Map map;
+                        String valor_total_categoria;
+                        List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
+                        for (DocumentSnapshot snapshot : snapshotList) {
+                            map = snapshot.getData();
+
+                            if(map.get("tipo").toString() == "true") {
+                                valor_total_categoria = map.get("valor_total").toString();
+                                valor_total_venda = valor_total_venda + Double.parseDouble(valor_total_categoria);
+                            }else {
+                                valor_total_categoria = map.get("valor_total").toString();
+                                valor_total_gasto = valor_total_gasto + Double.parseDouble(valor_total_categoria);
+                            }
+                            //Log.i("AQUIAsDatas", map.get("att").toString());
+                        }
+
+
+                        lucro = valor_total_venda - valor_total_gasto;
+
+                        DecimalFormat df = new DecimalFormat("0.00");
+                        String vendaS = df.format((valor_total_venda));
+
+                        String rcifrao = new String ("R$: ");
+                        rcifrao = rcifrao.concat(vendaS);
+                        TextView venda_mes_index= (TextView)findViewById(R.id.vendaMesRelatorio);
+                        venda_mes_index.setText(rcifrao);
+
+                        String gastoS = df.format((valor_total_gasto));
+
+                        rcifrao = new String ("R$: ");
+                        rcifrao = rcifrao.concat(gastoS);
+                        TextView gasto_mes_index= (TextView)findViewById(R.id.gastoMesRelatorio);
+                        gasto_mes_index.setText(rcifrao);
+
+                        rcifrao = new String ("R$: ");
+
+                        String lucroS = df.format((lucro));
+
+                        lucro = valor_total_venda - valor_total_gasto;
+
+                        rcifrao = rcifrao.concat( lucroS);
+                        TextView lucro_mes_index= (TextView)findViewById(R.id.lucroMesRelatorio);
+                        lucro_mes_index.setText(rcifrao);
+
+                    }
+                });
     }
 };
