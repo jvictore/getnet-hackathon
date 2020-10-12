@@ -22,6 +22,7 @@ public class index_activity extends AppCompatActivity {
     public void lancarGasto(View view) {
         startActivity(new Intent(this, gasto_activity.class));
     }
+
     public void lancarVenda(View view) {
         startActivity(new Intent(this, venda_activity.class));
     }
