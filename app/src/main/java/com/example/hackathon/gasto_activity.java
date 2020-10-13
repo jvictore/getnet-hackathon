@@ -81,7 +81,7 @@ public class gasto_activity extends AppCompatActivity {
 
         final Map<String, Object> v_individual = new HashMap<>();
         v_individual.put("data", dateFormat.format(now));
-        v_individual.put("valor_individual", df.format(valor));
+        v_individual.put("valor_individual", valor.toString());
 
         final FirebaseFirestore database = FirebaseFirestore.getInstance();
         CollectionReference collRef = database.collection("Categorias");
@@ -99,7 +99,7 @@ public class gasto_activity extends AppCompatActivity {
                             Double incremento = (total + valor);
 
                             final Map<String, Object> att_geral = new HashMap<>();
-                            att_geral.put("valor_total", df.format(incremento));
+                            att_geral.put("valor_total", incremento.toString());
                             att_geral.put("att", dateFormat.format(now));
 
                             database.collection("Categorias").document(idDoc).update(att_geral);

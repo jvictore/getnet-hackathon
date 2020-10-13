@@ -34,6 +34,8 @@ public class addcategoria_activity extends AppCompatActivity {
         Date now = new Date();
         DecimalFormat df = new DecimalFormat("0.00");
 
+        String init = "0.0";
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         dateFormat.setTimeZone(TimeZone.getTimeZone("GMT-3"));
         Map<String, Object> mapa = null;
@@ -54,7 +56,7 @@ public class addcategoria_activity extends AppCompatActivity {
         categoria.put("categoria", nome_categoria);
         categoria.put("tipo", tipo);
         categoria.put("att", dateFormat.format(now));
-        categoria.put("valor_total", df.format(0));
+        categoria.put("valor_total", init);
 
         db.collection("Categorias")
                 .add(categoria)
