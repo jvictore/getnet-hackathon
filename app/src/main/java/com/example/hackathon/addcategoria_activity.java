@@ -32,7 +32,6 @@ public class addcategoria_activity extends AppCompatActivity {
         Boolean tipo = null;
         String GV = getIntent().getStringExtra("TYPE");
         Date now = new Date();
-        DecimalFormat df = new DecimalFormat("0.00");
 
         String init = "0.0";
 

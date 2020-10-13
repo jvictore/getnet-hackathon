@@ -85,7 +85,6 @@ public class venda_activity extends AppCompatActivity {
         String selectedItem = s.getSelectedItem().toString();
 
         final Date now = new Date();
-        final DecimalFormat df = new DecimalFormat("0.00");
 
         final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         dateFormat.setTimeZone(TimeZone.getTimeZone("GMT-3"));
