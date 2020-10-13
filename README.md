@@ -5,6 +5,7 @@
 <div>
 <img src="img/inicial.png" width=”360” height="240"
 align="Right">
+  
 O Get Lucros é um aplicativo que visa facilitar auxiliar o pequeno e microempreendedor na gestão financeira de suas empresas.
 
 E para isso o aplicativo trás consigo um design minimalista a fim de descomplicar o processo de lançamento e controle de receitas se tornando amigável a pessoas que não tem muito contato com tecnologia.
