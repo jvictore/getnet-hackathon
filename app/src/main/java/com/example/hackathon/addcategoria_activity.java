@@ -65,13 +65,13 @@ public class addcategoria_activity extends AppCompatActivity {
                         Log.d("addcategoria", "DocumentSnapshot added with ID: " + documentReference.getId());
                     }
                 })
+
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.w("addcategoria", "Error adding document", e);
                     }
                 });
-
         finish();
     }
 }
